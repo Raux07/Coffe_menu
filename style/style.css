@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
     --main-color:#1F4529;
@@ -30,7 +30,6 @@ body{
 width: 70px;
 border-radius: 50%;
 }
-
 
 
 
@@ -119,6 +118,7 @@ outline: none;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+
 }
 
 
@@ -139,6 +139,11 @@ outline: none;
     margin: 20px;
     text-align: center;
     padding: 20px;
+    font-family: "Raleway", sans-serif;
+ 
+}
+.drink-description{
+    font-family: "Raleway", sans-serif;
 }
 
 .drink-image {
@@ -262,6 +267,19 @@ footer {
 
 
 @media screen and (max-width: 600px) {
+    
+footer{
+    font-family: Arial;
+    font-size: 13px;
+}
+
+    html{
+        overflow-x: hidden;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    
 
     .drinks,.sandwich,.desserts{
         flex-direction: column;
@@ -288,9 +306,10 @@ header{
     }
     .greeting_page{
         background-color: black;
-    background-image: none;
+    background-image: radial-gradient(ellipse 60% 40% at bottom ,rgba(0, 158, 0, 0.836) ,black);
     background-position: center center;
     background-size: 100vw;
     background-repeat: no-repeat;
     }
 }
+
