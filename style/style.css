@@ -8,6 +8,11 @@
     --main-font: 'Pacifico', cursive;
 }
 
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
 html{
     scroll-behavior: smooth;
 }
@@ -266,6 +271,71 @@ footer {
 }
 
 
+.modal_mobile{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.96);
+    backdrop-filter: blur(5px);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+ 
+}
+
+.modal_mobile a{
+    text-decoration: none;
+    color: white;
+}
+
+.modal_mobile ul{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-family: "Raleway", sans-serif;
+}
+
+
+.modal_notif{
+    display: none;
+    flex-direction: column;
+align-items: center;
+justify-content: space-evenly;
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.5);
+      
+        left: calc(50% - 100px);
+        top:calc(50% - 100px);
+   
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        color: white;
+        box-shadow: 0px 0px 5px white;
+        font-size: 14px;
+        font-family: Arial;
+        animation: slowUp 5s ease-in-out forwards;
+        z-index: 1000;
+}
+
+.modal_notif p{
+    text-align: center;
+}
+
+.modal_notif img{
+    width: 40px;
+
+}
+
+
+
 @media screen and (max-width: 600px) {
     
 footer{
@@ -313,3 +383,9 @@ header{
     }
 }
 
+
+@keyframes slowUp{
+    0%{transform: translateY(20px) ;opacity: 0;}
+    30%{transform: translateY(0px) ;opacity: 1;}
+    100%{transform: translateY(0px) ;opacity: 0;}
+}
