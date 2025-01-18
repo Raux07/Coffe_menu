@@ -333,8 +333,131 @@ justify-content: space-evenly;
     width: 40px;
 
 }
+.modal_payment{
+    position: fixed;
+    width: 450px;
+    height: 800px;
+    left: calc(50% - 250px);
+    top: calc(50% - 350px);
+   
+    background-color: white;
+    z-index: 1000;
+    border-radius: 15px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    background: brown;
+
+}
+
+.modal_payment img{
+    width: 500px;
+    height: 600px;
+    
+}
+
+.item_img{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle,rgb(27, 7, 7),orange,brown);
+}
+
+.item_img img{
+    width: 250px;
+    height: 250px;
+}
+
+.item_title{
+    width: 100%;
+    height: 20%;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 15px 15px 0px 0px;
+    background: white;
+   
+}  
+
+.item_size{
+    width: 100%;
+
+display: flex;
+ justify-content: center;
+ gap: 10px;
+ font-family: Arial;
+ font-size: 14px;
+}
+
+.item_desc{
+    height: 20%;
+    text-align: center;
+    width: 80%;
+    font-family: Arial;
+    font-size: 12px;
+}
+
+.modal_main{
+    background-color: white;
+    border-radius: 35px 35px 0px 0px;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.controls_order{
+    width: 150px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+    font-weight: bold;
+    color: white;
+    outline: none;
+    border: none;
+    box-shadow: black;
+    border-radius: 10px;
+   
+
+}
 
 
+.item_controls{
+    display: flex;
+   justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    border-radius: 15px 15px 0px 0px ;
+   
+}
+
+.controls_counter button{
+    border: none;
+    background: none;
+    outline: none;
+    font-weight: bold;
+}
+
+.controls_counter{
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #EED3B1;
+    align-items: center;
+}
 
 @media screen and (max-width: 600px) {
     
@@ -348,6 +471,14 @@ footer{
     }
     body{
         overflow-x: hidden;
+    }
+
+
+    .modal_payment{
+        width: 97vw;
+        height: 90vh;
+        left: calc(50% - 48.5vw);
+        top: calc(50% - 45vh);
     }
     
 

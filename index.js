@@ -3,7 +3,8 @@ const mobile_menu_btn = document.querySelector('#mobile_menu');
 const links = document.querySelectorAll('.link-item');
 const order_btn = document.querySelectorAll('.order-btn');
 const modal_notif = document.querySelector('.modal_notif');
-
+const modal_pay = document.querySelector('.modal_payment');
+const controlsOrder = document.querySelector('.controls_order');
 console.log(order_btn)
 
 const state = {
@@ -16,7 +17,8 @@ const openMenu = () => {
     state.isActive = true;
 }
 
-const showNotif= () => {
+
+const showNotif = () => {
  modal_notif.style.display = 'flex';
  let timeout = setTimeout(() => {
     modal_notif.style.display = 'none';
@@ -34,9 +36,21 @@ links.forEach(link => {
     )
 })
 
+
+function openPaymentModal() {
+    modal_pay.style.display = 'flex';
+}
+function closePaymentModal() {
+    modal_pay.style.display = 'none';
+    showNotif();
+    
+}
+
+
 order_btn.forEach(btn => {
-    btn.addEventListener('click',showNotif);   
+    btn.addEventListener('click',openPaymentModal);   
 })
 
 
 mobile_menu_btn.addEventListener('click',openMenu);
+controlsOrder.addEventListener('click',closePaymentModal);
